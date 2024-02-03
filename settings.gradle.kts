@@ -23,3 +23,4 @@ rootProject.name = "LAP-TOPIC-1-Modularization"
 include(":app")
 include(":feature1")
 include(":feature2")
+include(":module1")
