@@ -14,7 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import soy.gabimoreno.feature1.getFeature1Info
 import soy.gabimoreno.feature2.getFeature2Info
 import soy.gabimoreno.laptopic1modularization.ui.theme.LAPTOPIC1ModularizationTheme
-import soy.gabimoreno.modulecall.getModuleInfo
 import soy.gabimoreno.moduleimplementation1.ModuleImplementation1
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val info = getFeature1Info() + "\n" +
                         getFeature2Info() + "\n" +
-                        getModuleInfo(ModuleImplementation1())
+                        ModuleImplementation1().getModuleInfo()
                     ShowInfo(
                         info = info,
                         modifier = Modifier.padding(innerPadding)
