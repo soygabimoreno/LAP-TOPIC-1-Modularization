@@ -1,4 +1,7 @@
 package soy.gabimoreno.modulecall
 
-class ModuleCall {
+import soy.gabimoreno.moduleinterface.ModuleInterface
+
+fun getModuleInfo(moduleInterface: ModuleInterface): String {
+    return moduleInterface.getModuleInfo()
 }

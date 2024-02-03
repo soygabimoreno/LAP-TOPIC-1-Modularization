@@ -52,6 +52,10 @@ android {
 dependencies {
     implementation(project(":feature1"))
     implementation(project(":feature2"))
+    implementation(project(":module-call"))
+    implementation(project(":module-interface"))
+    implementation(project(":module-implementation-1"))
+    implementation(project(":module-implementation-2"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
