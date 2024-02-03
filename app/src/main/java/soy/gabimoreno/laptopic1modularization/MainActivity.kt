@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import soy.gabimoreno.feature1.getFeature1Info
+import soy.gabimoreno.feature2.getFeature2Info
 import soy.gabimoreno.laptopic1modularization.ui.theme.LAPTOPIC1ModularizationTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +22,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             LAPTOPIC1ModularizationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    val info = getFeature1Info() + "\n" + getFeature2Info()
+                    ShowInfo(
+                        info = info,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,9 +34,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun ShowInfo(info: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = info,
         modifier = modifier
     )
 }
@@ -42,6 +45,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     LAPTOPIC1ModularizationTheme {
-        Greeting("Android")
+        ShowInfo("Android")
     }
 }
